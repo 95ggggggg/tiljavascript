@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>node.js 서버 서비스 테스트입니다.</title>
+</head>
+
+<body>
+    <div class="div-box" id="divId">
+        <span id="spanParam">param</span>을(를) 입력안하셨어요.
+        <button onclick="setBtn('divId','none')">닫기</button>
+    </div>
+
+    <button id="btn1" onclick="setBtn('divId','block',document.getElementById('btn1').innerText)">아이디</button>
+    <button id="btn2" onclick="setBtn('divId','block',document.getElementById('btn2').innerText)">비밀번호</button>
+
+    <script>
+        function setBtn(paramId, paramDisplay, paramSpanText){
+            document.getElementById(paramId).style.display = paramDisplay;
+            document.getElementById('spanParam').innerHTML = paramSpanText;
+        }
+    </script>
+
+</body>
+</html>
